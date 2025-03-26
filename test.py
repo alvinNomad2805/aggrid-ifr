@@ -8,6 +8,9 @@ def load_data():
     return data
 
 data = load_data()
+print(data)
+
+st.set_page_config(page_title='IFR test report',layout='wide',initial_sidebar_state='expanded')
 
 shouldDisplayPivoted = st.checkbox("Pivot data on Reference Date")
 
@@ -69,7 +72,7 @@ gb.configure_column(
     header_name="brand",
     # valueGetter="new Date(data.referenceDate).getFullYear()",
     pivot=True,
-    hide=True,
+    hide=False,
 )
 
 gb.configure_column(
@@ -95,4 +98,4 @@ gb.configure_grid_options(
 )
 go = gb.build()
 
-AgGrid(data, gridOptions=go, height=400)
+AgGrid(data, gridOptions=go,fit_columns_on_grid_load=True,height=400)
