@@ -10,28 +10,37 @@ c1,c2,c3,c4 = st.columns(4)
 
 @st.cache_data()
 def load_data():
-    data = pd.read_excel("coba2.xlsx")
+    # data = pd.read_excel("coba2.xlsx")
+    data = pd.read_csv("ifr_test.csv")
     data.to_parquet('raw_data.parquet','auto')
     return data
 
 data = load_data()
 
 list_year = data['period_year'].unique().tolist()
-list_month = data['period_month'].unique().tolist()
+list_month = data['period_month'].sort_values().unique().tolist()
 list_companies = data['company'].unique().tolist()
 list_brands = data['brand'].unique().tolist()
 
 with c1:
-    c1.selectbox('Period Year',list_year)
+    selected_year = c1.selectbox('Period Year',list_year)
+    if selected_year:
+        data = data[data['period_year'] == selected_year]
 with c2:
-    c2.selectbox('Period Month',list_month)
+    selected_month = c2.selectbox('Period Month',list_month)
+    if selected_month:
+        data = data[data['period_month'] == selected_month]
 with c3:
     pass
 with c4:
     pass
 
-st.multiselect('Select Company(ies) (multi selection)',list_companies)
-st.multiselect('Select Brand(s) (multi selection)',list_brands)
+selected_companies = st.multiselect('Select Company(ies) (multi selection)',list_companies)
+if selected_companies != []:
+    data = data[data['company'].isin(selected_companies)]
+selected_brand = st.multiselect('Select Brand(s) (multi selection)',list_brands)
+if selected_brand != []:
+    data = data[data['brand'].isin(selected_brand)]
 
 tabs = st.tabs(['Detail Summary','Detail Percentage'])
 
@@ -144,7 +153,7 @@ with tabs[0]:
     )
 
     gb.configure_column(
-        field="value",
+        field="mutation_value",
         header_name="Total",
         width=100,
         type=["numericColumn"],
