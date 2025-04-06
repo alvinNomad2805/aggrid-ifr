@@ -48,7 +48,10 @@ with tabs[0]:
         editable=False,
     )
     gb.configure_column(
-        field="level_1", header_name="Level 1", width=80, rowGroup=shouldDisplayPivoted
+        field="level_1", 
+        header_name="Level 1", 
+        width=80, 
+        rowGroup=shouldDisplayPivoted
     )
 
     gb.configure_column(
@@ -135,7 +138,6 @@ with tabs[0]:
     gb.configure_column(
         field="value_type",
         header_name="Type",
-        rowGroup=True,
         # valueGetter="new Date(data.referenceDate).getFullYear()",
         pivot=True,
         hide=False,
@@ -158,18 +160,15 @@ with tabs[0]:
         # valueFormatter="value.toLocaleString()",
     )
 
-
     gb.configure_grid_options(
         tooltipShowDelay=0,
         pivotMode=shouldDisplayPivoted,
-    )
-
-    gb.configure_grid_options(
         autoGroupColumnDef=dict(
             minWidth=300, 
             pinned="left", 
             cellRendererParams=dict(suppressCount=True)
-        )
+        ),
+        pivotDefaultExpanded = -1
     )
     go = gb.build()
 
