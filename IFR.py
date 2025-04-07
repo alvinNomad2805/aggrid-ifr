@@ -11,10 +11,13 @@ c1,c2,c3,c4 = st.columns(4)
 @st.cache_data()
 def load_data():
     # data = pd.read_excel("coba2.xlsx")
-    data = pd.read_csv("ifr_test.csv")
+    # data = pd.read_csv("raw_data.csv")
+    data = pd.read_parquet('raw_data.parquet')
     return data
 
 data = load_data()
+
+print(data[data['level_5']=='Pihak Ketiga'])
 
 list_year = data['period_year'].unique().tolist()
 list_month = data['period_month'].sort_values().unique().tolist()
@@ -155,18 +158,10 @@ with tabs[0]:
     gb.configure_column(
         field="mutation_value",
         header_name="Total",
-        width=100,
+        width=150,
         type=["numericColumn"],
         aggFunc="sum",
         valueFormatter="value.toLocaleString()",
-    )
-
-    gb.configure_column(
-        field="percentage",
-        header_name="Percentage",
-        width=100,
-        type=["numericColumn"],
-        # valueFormatter="value.toLocaleString()",
     )
 
     gb.configure_grid_options(
