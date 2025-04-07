@@ -1,133 +1,133 @@
-,Unnamed: 0,level_1,level_2,level_3,level_4,level_5,level_6,level_7,company,brand,period_year,period_month,type,mutation,ytd
-0,0,I. OUTLET,"3S (Sales, Service, & Sparepart)",,,,,,ITN-MTH,NISSAN,2025,November,Actual,100,4433
-1,1,I. OUTLET,"2S (Service, & Sparepart)",,,,,,ITN-MTH,NISSAN,2025,March,Budget,200,5056
-2,2,I. OUTLET,1S (Sales),,,,,,ITN-MTH,NISSAN,2024,January,Actual,300,7354
-3,3,I. OUTLET,No. Of Stall,,,,,,ITN-MTH,NISSAN,2025,April,Budget,400,2625
-4,4,I. OUTLET,"3S (Sales, Service, & Sparepart)",,,,,,ITN-MTH,KIA,2025,April,Actual,100,184
-5,5,I. OUTLET,"2S (Service, & Sparepart)",,,,,,ITN-MTH,KIA,2025,May,Budget,200,148
-6,6,I. OUTLET,1S (Sales),,,,,,ITN-MTH,KIA,2025,October,Actual,300,5769
-7,7,I. OUTLET,No. Of Stall,,,,,,ITN-MTH,KIA,2024,September,Budget,400,9494
-8,8,I. OUTLET,"3S (Sales, Service, & Sparepart)",,,,,,ITN-MTH,VWCAR,2024,November,Actual,100,798
-9,9,I. OUTLET,"2S (Service, & Sparepart)",,,,,,ITN-MTH,VWCAR,2025,May,Budget,200,1805
-10,10,I. OUTLET,1S (Sales),,,,,,ITN-MTH,VWCAR,2024,February,Actual,300,7092
-11,11,I. OUTLET,No. Of Stall,,,,,,ITN-MTH,VWCAR,2024,January,Budget,400,4341
-12,12,I. OUTLET,"3S (Sales, Service, & Sparepart)",,,,,,ITN-STR,NISSAN,2025,October,Actual,100,5198
-13,13,I. OUTLET,"2S (Service, & Sparepart)",,,,,,ITN-STR,NISSAN,2024,July,Budget,200,1724
-14,14,I. OUTLET,1S (Sales),,,,,,ITN-STR,NISSAN,2025,December,Actual,300,1725
-15,15,I. OUTLET,No. Of Stall,,,,,,ITN-STR,NISSAN,2024,May,Budget,400,7963
-16,16,I. OUTLET,"3S (Sales, Service, & Sparepart)",,,,,,ITN-STR,KIA,2024,October,Actual,100,3441
-17,17,I. OUTLET,"2S (Service, & Sparepart)",,,,,,ITN-STR,KIA,2025,June,Budget,200,8340
-18,18,I. OUTLET,1S (Sales),,,,,,ITN-STR,KIA,2025,April,Actual,300,9803
-19,19,I. OUTLET,No. Of Stall,,,,,,ITN-STR,KIA,2024,July,Budget,400,2009
-20,20,I. OUTLET,"3S (Sales, Service, & Sparepart)",,,,,,ITN-STR,VWCAR,2025,May,Actual,100,1905
-21,21,I. OUTLET,"2S (Service, & Sparepart)",,,,,,ITN-STR,VWCAR,2024,April,Budget,200,5173
-22,22,I. OUTLET,1S (Sales),,,,,,ITN-STR,VWCAR,2025,April,Actual,300,4253
-23,23,I. OUTLET,No. Of Stall,,,,,,ITN-STR,VWCAR,2024,November,Budget,400,5717
-24,24,II. VOLUME,Unit Sales,New cars,Pihak Ketiga,,,,ITN-MTH,NISSAN,2024,April,Actual,10,1080
-25,25,II. VOLUME,Unit Sales,New cars,Afiliasi,IMSI Group,,,ITN-MTH,NISSAN,2024,October,Budget,20,2606
-26,26,II. VOLUME,Unit Sales,New cars,Afiliasi,IWT,,,ITN-MTH,NISSAN,2025,February,Actual,30,5237
-27,27,II. VOLUME,Unit Sales,New cars,Afiliasi,ITN,,,ITN-MTH,NISSAN,2025,April,Budget,40,4458
-28,28,II. VOLUME,Unit Sales,New cars,Afiliasi,WW,,,ITN-MTH,NISSAN,2024,June,Actual,50,613
-29,29,II. VOLUME,Unit Sales,New cars,Afiliasi,JD,,,ITN-MTH,NISSAN,2025,June,Budget,60,439
-30,30,II. VOLUME,Unit Sales,New cars,Afiliasi,IMT,,,ITN-MTH,NISSAN,2025,June,Actual,70,2145
-31,31,II. VOLUME,Unit Sales,New cars,Afiliasi,WMT,,,ITN-MTH,NISSAN,2025,November,Budget,80,408
-32,32,II. VOLUME,Unit Sales,New cars,Afiliasi,Antar Cabang,,,ITN-MTH,NISSAN,2025,October,Actual,10,5656
-33,33,II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Pihak Ketiga,,,,ITN-MTH,NISSAN,2025,February,Budget,101,745
-34,34,II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Afiliasi,IMSI Group,,,ITN-MTH,NISSAN,2024,December,Actual,10,9167
-35,35,II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Afiliasi,IWT,,,ITN-MTH,NISSAN,2025,May,Budget,120,842
-36,36,II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Afiliasi,ITN,,,ITN-MTH,NISSAN,2025,February,Actual,213,4891
-37,37,II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Afiliasi,WW,,,ITN-MTH,NISSAN,2024,August,Budget,134,2151
-38,38,II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Afiliasi,JD,,,ITN-MTH,NISSAN,2024,April,Actual,14,8073
-39,39,II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Afiliasi,IMT,,,ITN-MTH,NISSAN,2024,May,Budget,55,6328
-40,40,II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Afiliasi,WMT,,,ITN-MTH,NISSAN,2025,November,Actual,15,9697
-41,41,II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Afiliasi,Antar Cabang,,,ITN-MTH,NISSAN,2025,January,Budget,151,414
-42,42,II. VOLUME,Unit Sales,New cars,Pihak Ketiga,,,,ITN-MTH,KIA,2024,July,Actual,10,1960
-43,43,II. VOLUME,Unit Sales,New cars,Afiliasi,IMSI Group,,,ITN-MTH,KIA,2025,November,Budget,20,4273
-44,44,II. VOLUME,Unit Sales,New cars,Afiliasi,IWT,,,ITN-MTH,KIA,2025,November,Actual,30,7026
-45,45,II. VOLUME,Unit Sales,New cars,Afiliasi,ITN,,,ITN-MTH,KIA,2024,January,Budget,40,8506
-46,46,II. VOLUME,Unit Sales,New cars,Afiliasi,WW,,,ITN-MTH,KIA,2025,June,Actual,50,2152
-47,47,II. VOLUME,Unit Sales,New cars,Afiliasi,JD,,,ITN-MTH,KIA,2024,January,Budget,60,319
-48,48,II. VOLUME,Unit Sales,New cars,Afiliasi,IMT,,,ITN-MTH,KIA,2024,January,Actual,70,4822
-49,49,II. VOLUME,Unit Sales,New cars,Afiliasi,WMT,,,ITN-MTH,KIA,2024,February,Budget,1341,8134
-50,50,II. VOLUME,Unit Sales,New cars,Afiliasi,Antar Cabang,,,ITN-MTH,KIA,2024,July,Actual,10,4379
-51,51,II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Pihak Ketiga,,,,ITN-MTH,KIA,2025,October,Budget,101,9791
-52,52,II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Afiliasi,IMSI Group,,,ITN-MTH,KIA,2024,March,Actual,10,4642
-53,53,II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Afiliasi,IWT,,,ITN-MTH,KIA,2024,May,Budget,31413,7932
-54,54,II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Afiliasi,ITN,,,ITN-MTH,KIA,2024,August,Actual,213,3270
-55,55,II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Afiliasi,WW,,,ITN-MTH,KIA,2024,July,Budget,413,5116
-56,56,II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Afiliasi,JD,,,ITN-MTH,KIA,2025,July,Actual,14,3796
-57,57,II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Afiliasi,IMT,,,ITN-MTH,KIA,2025,May,Budget,141,151
-58,58,II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Afiliasi,WMT,,,ITN-MTH,KIA,2025,October,Actual,15,371
-59,59,II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Afiliasi,Antar Cabang,,,ITN-MTH,KIA,2024,April,Budget,151,3752
-60,60,II. VOLUME,Unit Sales,New cars,Pihak Ketiga,,,,ITN-MTH,VWCAR,2025,April,Actual,10,9274
-61,61,II. VOLUME,Unit Sales,New cars,Afiliasi,IMSI Group,,,ITN-MTH,VWCAR,2025,July,Budget,341,5761
-62,62,II. VOLUME,Unit Sales,New cars,Afiliasi,IWT,,,ITN-MTH,VWCAR,2025,December,Actual,30,2127
-63,63,II. VOLUME,Unit Sales,New cars,Afiliasi,ITN,,,ITN-MTH,VWCAR,2024,August,Budget,141,6761
-64,64,II. VOLUME,Unit Sales,New cars,Afiliasi,WW,,,ITN-MTH,VWCAR,2024,October,Actual,50,748
-65,65,II. VOLUME,Unit Sales,New cars,Afiliasi,JD,,,ITN-MTH,VWCAR,2024,June,Budget,1431,9980
-66,66,II. VOLUME,Unit Sales,New cars,Afiliasi,IMT,,,ITN-MTH,VWCAR,2025,October,Actual,70,4124
-67,67,II. VOLUME,Unit Sales,New cars,Afiliasi,WMT,,,ITN-MTH,VWCAR,2025,October,Budget,80,7696
-68,68,II. VOLUME,Unit Sales,New cars,Afiliasi,Antar Cabang,,,ITN-MTH,VWCAR,2025,April,Actual,414,7087
-69,69,II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Pihak Ketiga,,,,ITN-MTH,VWCAR,2025,October,Budget,101,5973
-70,70,II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Afiliasi,IMSI Group,,,ITN-MTH,VWCAR,2024,April,Actual,414,876
-71,71,II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Afiliasi,IWT,,,ITN-MTH,VWCAR,2025,March,Budget,1,8444
-72,72,II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Afiliasi,ITN,,,ITN-MTH,VWCAR,2025,February,Actual,213,1950
-73,73,II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Afiliasi,WW,,,ITN-MTH,VWCAR,2024,January,Budget,412,3091
-74,74,II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Afiliasi,JD,,,ITN-MTH,VWCAR,2024,July,Actual,14,6781
-75,75,II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Afiliasi,IMT,,,ITN-MTH,VWCAR,2024,April,Budget,41,5740
-76,76,II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Afiliasi,WMT,,,ITN-MTH,VWCAR,2025,July,Actual,15,4785
-77,77,II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Afiliasi,Antar Cabang,,,ITN-MTH,VWCAR,2024,July,Budget,151,6034
-78,78,II. VOLUME,Unit Sales,New cars,Pihak Ketiga,,,,ITN-STR,NISSAN,2025,November,Actual,10,4255
-79,79,II. VOLUME,Unit Sales,New cars,Afiliasi,IMSI Group,,,ITN-STR,NISSAN,2024,May,Budget,20,9851
-80,80,II. VOLUME,Unit Sales,New cars,Afiliasi,IWT,,,ITN-STR,NISSAN,2025,September,Actual,30,174
-81,81,II. VOLUME,Unit Sales,New cars,Afiliasi,ITN,,,ITN-STR,NISSAN,2024,February,Budget,40,5212
-82,82,II. VOLUME,Unit Sales,New cars,Afiliasi,WW,,,ITN-STR,NISSAN,2025,January,Actual,50,995
-83,83,II. VOLUME,Unit Sales,New cars,Afiliasi,JD,,,ITN-STR,NISSAN,2024,September,Budget,60,8299
-84,84,II. VOLUME,Unit Sales,New cars,Afiliasi,IMT,,,ITN-STR,NISSAN,2024,September,Actual,70,6084
-85,85,II. VOLUME,Unit Sales,New cars,Afiliasi,WMT,,,ITN-STR,NISSAN,2025,December,Budget,80,7731
-86,86,II. VOLUME,Unit Sales,New cars,Afiliasi,Antar Cabang,,,ITN-STR,NISSAN,2025,November,Actual,10,8590
-87,87,II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Pihak Ketiga,,,,ITN-STR,NISSAN,2024,May,Budget,101,2212
-88,88,II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Afiliasi,IMSI Group,,,ITN-STR,NISSAN,2024,September,Actual,10,7311
-89,89,II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Afiliasi,IWT,,,ITN-STR,NISSAN,2025,April,Budget,120,1366
-90,90,II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Afiliasi,ITN,,,ITN-STR,NISSAN,2025,August,Actual,213,3416
-91,91,II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Afiliasi,WW,,,ITN-STR,NISSAN,2025,March,Budget,134,1851
-92,92,II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Afiliasi,JD,,,ITN-STR,NISSAN,2024,June,Actual,14,2991
-93,93,II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Afiliasi,IMT,,,ITN-STR,NISSAN,2025,December,Budget,55,497
-94,94,II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Afiliasi,WMT,,,ITN-STR,NISSAN,2024,June,Actual,15,7140
-95,95,II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Afiliasi,Antar Cabang,,,ITN-STR,NISSAN,2024,May,Budget,151,5432
-96,96,II. VOLUME,Unit Sales,New cars,Pihak Ketiga,,,,ITN-STR,KIA,2025,May,Actual,10,1035
-97,97,II. VOLUME,Unit Sales,New cars,Afiliasi,IMSI Group,,,ITN-STR,KIA,2025,August,Budget,20,6979
-98,98,II. VOLUME,Unit Sales,New cars,Afiliasi,IWT,,,ITN-STR,KIA,2024,October,Actual,30,593
-99,99,II. VOLUME,Unit Sales,New cars,Afiliasi,ITN,,,ITN-STR,KIA,2024,June,Budget,40,6055
-100,100,II. VOLUME,Unit Sales,New cars,Afiliasi,WW,,,ITN-STR,KIA,2024,October,Actual,513,4671
-101,101,II. VOLUME,Unit Sales,New cars,Afiliasi,JD,,,ITN-STR,KIA,2024,October,Budget,531,6549
-102,102,II. VOLUME,Unit Sales,New cars,Afiliasi,IMT,,,ITN-STR,KIA,2025,August,Actual,135,6856
-103,103,II. VOLUME,Unit Sales,New cars,Afiliasi,WMT,,,ITN-STR,KIA,2024,April,Budget,1341,145
-104,104,II. VOLUME,Unit Sales,New cars,Afiliasi,Antar Cabang,,,ITN-STR,KIA,2024,September,Actual,10,1989
-105,105,II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Pihak Ketiga,,,,ITN-STR,KIA,2025,October,Budget,1,6664
-106,106,II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Afiliasi,IMSI Group,,,ITN-STR,KIA,2024,June,Actual,10,1348
-107,107,II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Afiliasi,IWT,,,ITN-STR,KIA,2024,February,Budget,31413,8133
-108,108,II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Afiliasi,ITN,,,ITN-STR,KIA,2025,March,Actual,513,9829
-109,109,II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Afiliasi,WW,,,ITN-STR,KIA,2025,June,Budget,413,6109
-110,110,II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Afiliasi,JD,,,ITN-STR,KIA,2025,April,Actual,14,7557
-111,111,II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Afiliasi,IMT,,,ITN-STR,KIA,2024,March,Budget,141,4594
-112,112,II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Afiliasi,WMT,,,ITN-STR,KIA,2024,November,Actual,1341,1901
-113,113,II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Afiliasi,Antar Cabang,,,ITN-STR,KIA,2025,November,Budget,51,972
-114,114,II. VOLUME,Unit Sales,New cars,Pihak Ketiga,,,,ITN-STR,VWCAR,2024,March,Actual,10,5493
-115,115,II. VOLUME,Unit Sales,New cars,Afiliasi,IMSI Group,,,ITN-STR,VWCAR,2024,February,Budget,341,6742
-116,116,II. VOLUME,Unit Sales,New cars,Afiliasi,IWT,,,ITN-STR,VWCAR,2024,December,Actual,1341,9203
-117,117,II. VOLUME,Unit Sales,New cars,Afiliasi,ITN,,,ITN-STR,VWCAR,2024,April,Budget,15,5607
-118,118,II. VOLUME,Unit Sales,New cars,Afiliasi,WW,,,ITN-STR,VWCAR,2024,May,Actual,50,4193
-119,119,II. VOLUME,Unit Sales,New cars,Afiliasi,JD,,,ITN-STR,VWCAR,2025,May,Budget,1431,5155
-120,120,II. VOLUME,Unit Sales,New cars,Afiliasi,IMT,,,ITN-STR,VWCAR,2024,November,Actual,531,118
-121,121,II. VOLUME,Unit Sales,New cars,Afiliasi,WMT,,,ITN-STR,VWCAR,2024,May,Budget,80,4056
-122,122,II. VOLUME,Unit Sales,New cars,Afiliasi,Antar Cabang,,,ITN-STR,VWCAR,2024,March,Actual,414,2107
-123,123,II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Pihak Ketiga,,,,ITN-STR,VWCAR,2024,March,Budget,15,3776
-124,124,II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Afiliasi,IMSI Group,,,ITN-STR,VWCAR,2024,August,Actual,414,891
-125,125,II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Afiliasi,IWT,,,ITN-STR,VWCAR,2025,April,Budget,1351,1720
-126,126,II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Afiliasi,ITN,,,ITN-STR,VWCAR,2024,April,Actual,213,847
-127,127,II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Afiliasi,WW,,,ITN-STR,VWCAR,2024,July,Budget,412,8840
-128,128,II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Afiliasi,JD,,,ITN-STR,VWCAR,2024,January,Actual,153,992
-129,129,II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Afiliasi,IMT,,,ITN-STR,VWCAR,2025,July,Budget,41,6797
-130,130,II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Afiliasi,WMT,,,ITN-STR,VWCAR,2025,June,Actual,15,1779
-131,131,II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Afiliasi,Antar Cabang,,,ITN-STR,VWCAR,2025,June,Budget,151,2187
+level_1,level_2,level_3,level_4,level_5,level_6,level_7,company,brand,period_year,period_month,type,mutation,ytd
+I. OUTLET,"3S (Sales, Service, & Sparepart)",,,,,,ITN-MTH,NISSAN,2025,November,Actual,100,4433
+I. OUTLET,"2S (Service, & Sparepart)",,,,,,ITN-MTH,NISSAN,2025,March,Budget,200,5056
+I. OUTLET,1S (Sales),,,,,,ITN-MTH,NISSAN,2024,January,Actual,300,7354
+I. OUTLET,No. Of Stall,,,,,,ITN-MTH,NISSAN,2025,April,Budget,400,2625
+I. OUTLET,"3S (Sales, Service, & Sparepart)",,,,,,ITN-MTH,KIA,2025,April,Actual,100,184
+I. OUTLET,"2S (Service, & Sparepart)",,,,,,ITN-MTH,KIA,2025,May,Budget,200,148
+I. OUTLET,1S (Sales),,,,,,ITN-MTH,KIA,2025,October,Actual,300,5769
+I. OUTLET,No. Of Stall,,,,,,ITN-MTH,KIA,2024,September,Budget,400,9494
+I. OUTLET,"3S (Sales, Service, & Sparepart)",,,,,,ITN-MTH,VWCAR,2024,November,Actual,100,798
+I. OUTLET,"2S (Service, & Sparepart)",,,,,,ITN-MTH,VWCAR,2025,May,Budget,200,1805
+I. OUTLET,1S (Sales),,,,,,ITN-MTH,VWCAR,2024,February,Actual,300,7092
+I. OUTLET,No. Of Stall,,,,,,ITN-MTH,VWCAR,2024,January,Budget,400,4341
+I. OUTLET,"3S (Sales, Service, & Sparepart)",,,,,,ITN-STR,NISSAN,2025,October,Actual,100,5198
+I. OUTLET,"2S (Service, & Sparepart)",,,,,,ITN-STR,NISSAN,2024,July,Budget,200,1724
+I. OUTLET,1S (Sales),,,,,,ITN-STR,NISSAN,2025,December,Actual,300,1725
+I. OUTLET,No. Of Stall,,,,,,ITN-STR,NISSAN,2024,May,Budget,400,7963
+I. OUTLET,"3S (Sales, Service, & Sparepart)",,,,,,ITN-STR,KIA,2024,October,Actual,100,3441
+I. OUTLET,"2S (Service, & Sparepart)",,,,,,ITN-STR,KIA,2025,June,Budget,200,8340
+I. OUTLET,1S (Sales),,,,,,ITN-STR,KIA,2025,April,Actual,300,9803
+I. OUTLET,No. Of Stall,,,,,,ITN-STR,KIA,2024,July,Budget,400,2009
+I. OUTLET,"3S (Sales, Service, & Sparepart)",,,,,,ITN-STR,VWCAR,2025,May,Actual,100,1905
+I. OUTLET,"2S (Service, & Sparepart)",,,,,,ITN-STR,VWCAR,2024,April,Budget,200,5173
+I. OUTLET,1S (Sales),,,,,,ITN-STR,VWCAR,2025,April,Actual,300,4253
+I. OUTLET,No. Of Stall,,,,,,ITN-STR,VWCAR,2024,November,Budget,400,5717
+II. VOLUME,Unit Sales,New cars,Pihak Ketiga,,,,ITN-MTH,NISSAN,2024,April,Actual,10,1080
+II. VOLUME,Unit Sales,New cars,Afiliasi,IMSI Group,,,ITN-MTH,NISSAN,2024,October,Budget,20,2606
+II. VOLUME,Unit Sales,New cars,Afiliasi,IWT,,,ITN-MTH,NISSAN,2025,February,Actual,30,5237
+II. VOLUME,Unit Sales,New cars,Afiliasi,ITN,,,ITN-MTH,NISSAN,2025,April,Budget,40,4458
+II. VOLUME,Unit Sales,New cars,Afiliasi,WW,,,ITN-MTH,NISSAN,2024,June,Actual,50,613
+II. VOLUME,Unit Sales,New cars,Afiliasi,JD,,,ITN-MTH,NISSAN,2025,June,Budget,60,439
+II. VOLUME,Unit Sales,New cars,Afiliasi,IMT,,,ITN-MTH,NISSAN,2025,June,Actual,70,2145
+II. VOLUME,Unit Sales,New cars,Afiliasi,WMT,,,ITN-MTH,NISSAN,2025,November,Budget,80,408
+II. VOLUME,Unit Sales,New cars,Afiliasi,Antar Cabang,,,ITN-MTH,NISSAN,2025,October,Actual,10,5656
+II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Pihak Ketiga,,,,ITN-MTH,NISSAN,2025,February,Budget,101,745
+II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Afiliasi,IMSI Group,,,ITN-MTH,NISSAN,2024,December,Actual,10,9167
+II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Afiliasi,IWT,,,ITN-MTH,NISSAN,2025,May,Budget,120,842
+II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Afiliasi,ITN,,,ITN-MTH,NISSAN,2025,February,Actual,213,4891
+II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Afiliasi,WW,,,ITN-MTH,NISSAN,2024,August,Budget,134,2151
+II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Afiliasi,JD,,,ITN-MTH,NISSAN,2024,April,Actual,14,8073
+II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Afiliasi,IMT,,,ITN-MTH,NISSAN,2024,May,Budget,55,6328
+II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Afiliasi,WMT,,,ITN-MTH,NISSAN,2025,November,Actual,15,9697
+II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Afiliasi,Antar Cabang,,,ITN-MTH,NISSAN,2025,January,Budget,151,414
+II. VOLUME,Unit Sales,New cars,Pihak Ketiga,,,,ITN-MTH,KIA,2024,July,Actual,10,1960
+II. VOLUME,Unit Sales,New cars,Afiliasi,IMSI Group,,,ITN-MTH,KIA,2025,November,Budget,20,4273
+II. VOLUME,Unit Sales,New cars,Afiliasi,IWT,,,ITN-MTH,KIA,2025,November,Actual,30,7026
+II. VOLUME,Unit Sales,New cars,Afiliasi,ITN,,,ITN-MTH,KIA,2024,January,Budget,40,8506
+II. VOLUME,Unit Sales,New cars,Afiliasi,WW,,,ITN-MTH,KIA,2025,June,Actual,50,2152
+II. VOLUME,Unit Sales,New cars,Afiliasi,JD,,,ITN-MTH,KIA,2024,January,Budget,60,319
+II. VOLUME,Unit Sales,New cars,Afiliasi,IMT,,,ITN-MTH,KIA,2024,January,Actual,70,4822
+II. VOLUME,Unit Sales,New cars,Afiliasi,WMT,,,ITN-MTH,KIA,2024,February,Budget,1341,8134
+II. VOLUME,Unit Sales,New cars,Afiliasi,Antar Cabang,,,ITN-MTH,KIA,2024,July,Actual,10,4379
+II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Pihak Ketiga,,,,ITN-MTH,KIA,2025,October,Budget,101,9791
+II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Afiliasi,IMSI Group,,,ITN-MTH,KIA,2024,March,Actual,10,4642
+II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Afiliasi,IWT,,,ITN-MTH,KIA,2024,May,Budget,31413,7932
+II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Afiliasi,ITN,,,ITN-MTH,KIA,2024,August,Actual,213,3270
+II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Afiliasi,WW,,,ITN-MTH,KIA,2024,July,Budget,413,5116
+II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Afiliasi,JD,,,ITN-MTH,KIA,2025,July,Actual,14,3796
+II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Afiliasi,IMT,,,ITN-MTH,KIA,2025,May,Budget,141,151
+II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Afiliasi,WMT,,,ITN-MTH,KIA,2025,October,Actual,15,371
+II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Afiliasi,Antar Cabang,,,ITN-MTH,KIA,2024,April,Budget,151,3752
+II. VOLUME,Unit Sales,New cars,Pihak Ketiga,,,,ITN-MTH,VWCAR,2025,April,Actual,10,9274
+II. VOLUME,Unit Sales,New cars,Afiliasi,IMSI Group,,,ITN-MTH,VWCAR,2025,July,Budget,341,5761
+II. VOLUME,Unit Sales,New cars,Afiliasi,IWT,,,ITN-MTH,VWCAR,2025,December,Actual,30,2127
+II. VOLUME,Unit Sales,New cars,Afiliasi,ITN,,,ITN-MTH,VWCAR,2024,August,Budget,141,6761
+II. VOLUME,Unit Sales,New cars,Afiliasi,WW,,,ITN-MTH,VWCAR,2024,October,Actual,50,748
+II. VOLUME,Unit Sales,New cars,Afiliasi,JD,,,ITN-MTH,VWCAR,2024,June,Budget,1431,9980
+II. VOLUME,Unit Sales,New cars,Afiliasi,IMT,,,ITN-MTH,VWCAR,2025,October,Actual,70,4124
+II. VOLUME,Unit Sales,New cars,Afiliasi,WMT,,,ITN-MTH,VWCAR,2025,October,Budget,80,7696
+II. VOLUME,Unit Sales,New cars,Afiliasi,Antar Cabang,,,ITN-MTH,VWCAR,2025,April,Actual,414,7087
+II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Pihak Ketiga,,,,ITN-MTH,VWCAR,2025,October,Budget,101,5973
+II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Afiliasi,IMSI Group,,,ITN-MTH,VWCAR,2024,April,Actual,414,876
+II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Afiliasi,IWT,,,ITN-MTH,VWCAR,2025,March,Budget,1,8444
+II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Afiliasi,ITN,,,ITN-MTH,VWCAR,2025,February,Actual,213,1950
+II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Afiliasi,WW,,,ITN-MTH,VWCAR,2024,January,Budget,412,3091
+II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Afiliasi,JD,,,ITN-MTH,VWCAR,2024,July,Actual,14,6781
+II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Afiliasi,IMT,,,ITN-MTH,VWCAR,2024,April,Budget,41,5740
+II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Afiliasi,WMT,,,ITN-MTH,VWCAR,2025,July,Actual,15,4785
+II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Afiliasi,Antar Cabang,,,ITN-MTH,VWCAR,2024,July,Budget,151,6034
+II. VOLUME,Unit Sales,New cars,Pihak Ketiga,,,,ITN-STR,NISSAN,2025,November,Actual,10,4255
+II. VOLUME,Unit Sales,New cars,Afiliasi,IMSI Group,,,ITN-STR,NISSAN,2024,May,Budget,20,9851
+II. VOLUME,Unit Sales,New cars,Afiliasi,IWT,,,ITN-STR,NISSAN,2025,September,Actual,30,174
+II. VOLUME,Unit Sales,New cars,Afiliasi,ITN,,,ITN-STR,NISSAN,2024,February,Budget,40,5212
+II. VOLUME,Unit Sales,New cars,Afiliasi,WW,,,ITN-STR,NISSAN,2025,January,Actual,50,995
+II. VOLUME,Unit Sales,New cars,Afiliasi,JD,,,ITN-STR,NISSAN,2024,September,Budget,60,8299
+II. VOLUME,Unit Sales,New cars,Afiliasi,IMT,,,ITN-STR,NISSAN,2024,September,Actual,70,6084
+II. VOLUME,Unit Sales,New cars,Afiliasi,WMT,,,ITN-STR,NISSAN,2025,December,Budget,80,7731
+II. VOLUME,Unit Sales,New cars,Afiliasi,Antar Cabang,,,ITN-STR,NISSAN,2025,November,Actual,10,8590
+II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Pihak Ketiga,,,,ITN-STR,NISSAN,2024,May,Budget,101,2212
+II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Afiliasi,IMSI Group,,,ITN-STR,NISSAN,2024,September,Actual,10,7311
+II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Afiliasi,IWT,,,ITN-STR,NISSAN,2025,April,Budget,120,1366
+II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Afiliasi,ITN,,,ITN-STR,NISSAN,2025,August,Actual,213,3416
+II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Afiliasi,WW,,,ITN-STR,NISSAN,2025,March,Budget,134,1851
+II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Afiliasi,JD,,,ITN-STR,NISSAN,2024,June,Actual,14,2991
+II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Afiliasi,IMT,,,ITN-STR,NISSAN,2025,December,Budget,55,497
+II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Afiliasi,WMT,,,ITN-STR,NISSAN,2024,June,Actual,15,7140
+II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Afiliasi,Antar Cabang,,,ITN-STR,NISSAN,2024,May,Budget,151,5432
+II. VOLUME,Unit Sales,New cars,Pihak Ketiga,,,,ITN-STR,KIA,2025,May,Actual,10,1035
+II. VOLUME,Unit Sales,New cars,Afiliasi,IMSI Group,,,ITN-STR,KIA,2025,August,Budget,20,6979
+II. VOLUME,Unit Sales,New cars,Afiliasi,IWT,,,ITN-STR,KIA,2024,October,Actual,30,593
+II. VOLUME,Unit Sales,New cars,Afiliasi,ITN,,,ITN-STR,KIA,2024,June,Budget,40,6055
+II. VOLUME,Unit Sales,New cars,Afiliasi,WW,,,ITN-STR,KIA,2024,October,Actual,513,4671
+II. VOLUME,Unit Sales,New cars,Afiliasi,JD,,,ITN-STR,KIA,2024,October,Budget,531,6549
+II. VOLUME,Unit Sales,New cars,Afiliasi,IMT,,,ITN-STR,KIA,2025,August,Actual,135,6856
+II. VOLUME,Unit Sales,New cars,Afiliasi,WMT,,,ITN-STR,KIA,2024,April,Budget,1341,145
+II. VOLUME,Unit Sales,New cars,Afiliasi,Antar Cabang,,,ITN-STR,KIA,2024,September,Actual,10,1989
+II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Pihak Ketiga,,,,ITN-STR,KIA,2025,October,Budget,1,6664
+II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Afiliasi,IMSI Group,,,ITN-STR,KIA,2024,June,Actual,10,1348
+II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Afiliasi,IWT,,,ITN-STR,KIA,2024,February,Budget,31413,8133
+II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Afiliasi,ITN,,,ITN-STR,KIA,2025,March,Actual,513,9829
+II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Afiliasi,WW,,,ITN-STR,KIA,2025,June,Budget,413,6109
+II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Afiliasi,JD,,,ITN-STR,KIA,2025,April,Actual,14,7557
+II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Afiliasi,IMT,,,ITN-STR,KIA,2024,March,Budget,141,4594
+II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Afiliasi,WMT,,,ITN-STR,KIA,2024,November,Actual,1341,1901
+II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Afiliasi,Antar Cabang,,,ITN-STR,KIA,2025,November,Budget,51,972
+II. VOLUME,Unit Sales,New cars,Pihak Ketiga,,,,ITN-STR,VWCAR,2024,March,Actual,10,5493
+II. VOLUME,Unit Sales,New cars,Afiliasi,IMSI Group,,,ITN-STR,VWCAR,2024,February,Budget,341,6742
+II. VOLUME,Unit Sales,New cars,Afiliasi,IWT,,,ITN-STR,VWCAR,2024,December,Actual,1341,9203
+II. VOLUME,Unit Sales,New cars,Afiliasi,ITN,,,ITN-STR,VWCAR,2024,April,Budget,15,5607
+II. VOLUME,Unit Sales,New cars,Afiliasi,WW,,,ITN-STR,VWCAR,2024,May,Actual,50,4193
+II. VOLUME,Unit Sales,New cars,Afiliasi,JD,,,ITN-STR,VWCAR,2025,May,Budget,1431,5155
+II. VOLUME,Unit Sales,New cars,Afiliasi,IMT,,,ITN-STR,VWCAR,2024,November,Actual,531,118
+II. VOLUME,Unit Sales,New cars,Afiliasi,WMT,,,ITN-STR,VWCAR,2024,May,Budget,80,4056
+II. VOLUME,Unit Sales,New cars,Afiliasi,Antar Cabang,,,ITN-STR,VWCAR,2024,March,Actual,414,2107
+II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Pihak Ketiga,,,,ITN-STR,VWCAR,2024,March,Budget,15,3776
+II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Afiliasi,IMSI Group,,,ITN-STR,VWCAR,2024,August,Actual,414,891
+II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Afiliasi,IWT,,,ITN-STR,VWCAR,2025,April,Budget,1351,1720
+II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Afiliasi,ITN,,,ITN-STR,VWCAR,2024,April,Actual,213,847
+II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Afiliasi,WW,,,ITN-STR,VWCAR,2024,July,Budget,412,8840
+II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Afiliasi,JD,,,ITN-STR,VWCAR,2024,January,Actual,153,992
+II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Afiliasi,IMT,,,ITN-STR,VWCAR,2025,July,Budget,41,6797
+II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Afiliasi,WMT,,,ITN-STR,VWCAR,2025,June,Actual,15,1779
+II. VOLUME,Unit Sales,Heavy duty trucks & equipments,Afiliasi,Antar Cabang,,,ITN-STR,VWCAR,2025,June,Budget,151,2187
