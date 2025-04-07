@@ -11,41 +11,6 @@ def load_data():
     return data
 
 data = load_data()
-# print(data.columns)
-
-# data = data.drop(["test1", "test2"], axis=1)
-
-# data["type"] = np.where((data.index + 1) % 2 != 0, "Actual", "Budget")
-
-# data = data.rename(columns={
-#     "section" : "level_1", 
-#     "subsection" : "level_2", 
-#     "subsubsection" : "level_3", 
-#     "subsubsubsection" : "level_4", 
-#     "subsubsubsubsection" : "level_5", 
-#     "total" : "mutation"
-# })
-
-
-# months = ["January", "February", "March", "April", "May", "June",
-#           "July", "August", "September", "October", "November", "December"]
-
-# data["level_6"] = None
-# data["level_7"] = None
-# data["period_month"] = np.random.choice(months, size=len(data))
-# data["period_year"] = np.random.choice([2024, 2025], size=len(data))
-# data["ytd"] = None
-
-
-# desired_order = [
-#     "level_1", "level_2", "level_3", "level_4", "level_5",
-#     "level_6", "level_7", "company", "brand",
-#     "period_year", "period_month", "type", "mutation", "ytd"
-# ]
-
-# data = data[desired_order]
-
-# data.to_csv("new_data_mapping_ifr.csv", index=False)
 
 st.set_page_config(page_title='IFR test report',layout='wide',initial_sidebar_state='expanded')
 
