@@ -1,5 +1,4 @@
-/Lib
-/etc
-/Scripts
-/share
-pyvenv.cfg
+*.xlsx
+*.xls
+*.csv
+*.parquet
