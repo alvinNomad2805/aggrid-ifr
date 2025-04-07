@@ -12,7 +12,6 @@ c1,c2,c3,c4 = st.columns(4)
 def load_data():
     # data = pd.read_excel("coba2.xlsx")
     data = pd.read_csv("ifr_test.csv")
-    data.to_parquet('raw_data.parquet','auto')
     return data
 
 data = load_data()
