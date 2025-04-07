@@ -12,6 +12,26 @@ def load_data():
 
 data = load_data()
 
+month_to_number = {month: str(index) for index, month in enumerate(calendar.month_name) if month}
+
+data["period_month"] = data["period_month"].map(month_to_number)
+
+month_mapping = {
+    "1": "January",
+    "2": "February",
+    "3": "March",
+    "4": "April",
+    "5": "May",
+    "6": "June",
+    "7": "July",
+    "8": "August",
+    "9": "September",
+    "10": "October",
+    "11": "November",
+    "12": "December"
+}
+
+
 st.set_page_config(page_title='IFR test report',layout='wide',initial_sidebar_state='expanded')
 
 h1,h2,h3,h4= st.columns(4)
@@ -28,12 +48,10 @@ with h1:
     select_year = h1.selectbox("Year", list_year, index=list_year.index(default_year), key="year")
     data = data[data["period_year"] == select_year]
 with h2:
-    list_month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
-    select_month = h2.selectbox("Month", list_month, index=default_month_index, key="month_start")
-    month_dict = dict((v, k) for k, v in enumerate(calendar.month_name))
-    selected_month = month_dict[select_month]   
-    selected_month = "0"+ str(selected_month) if len(str(selected_month)) < 2 else str(selected_month)
-    data = data[data["period_month"] == select_month]
+    reverse_month_mapping = {v: k for k, v in month_mapping.items()}
+    select_month = h2.selectbox("Month", list(month_mapping.values()), index=default_month_index)
+    selected_month_number = reverse_month_mapping[select_month]
+    data = data[data["period_month"] == selected_month_number]
 with h3:
     brands = data["brand"].unique()
     selected_brands = h3.multiselect("Brand", brands)
