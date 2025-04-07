@@ -158,7 +158,7 @@ with tabs[0]:
         width=100,
         type=["numericColumn"],
         aggFunc="sum",
-        # valueFormatter="value.toLocaleString()",
+        valueFormatter="value.toLocaleString()",
     )
 
     gb.configure_column(
@@ -177,11 +177,15 @@ with tabs[0]:
             pinned="left", 
             cellRendererParams=dict(suppressCount=True)
         ),
-        pivotDefaultExpanded = -1
+        pivotDefaultExpanded = -1,
+        autoSizeStrategy=dict(
+            type= 'fitCellContents'
+        ),
+        autoSizeAllColumns = True,
     )
     go = gb.build()
 
-    AgGrid(data, gridOptions=go,fit_columns_on_grid_load=True,height=700)
+    AgGrid(data, gridOptions=go,fit_columns_on_grid_load=False,height=700)
 with tabs[1]:
     st.subheader('Percentage Summary')
     data = {
