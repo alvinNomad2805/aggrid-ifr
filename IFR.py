@@ -46,7 +46,8 @@ tabs = st.tabs(['Detail Summary','Detail Percentage'])
 
 with tabs[0]:
     st.subheader('IFR summary and detail')
-    shouldDisplayPivoted = st.checkbox("Check the detail IFR")
+    # shouldDisplayPivoted = st.checkbox("Check the detail IFR")
+    shouldDisplayPivoted = True
 
     gb = GridOptionsBuilder()
 
