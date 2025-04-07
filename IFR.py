@@ -1,3 +1,4 @@
+import calendar
 import streamlit as st
 import pandas as pd
 from st_aggrid import AgGrid, GridOptionsBuilder
@@ -10,15 +11,17 @@ c1,c2,c3,c4 = st.columns(4)
 
 @st.cache_data()
 def load_data():
-    # data = pd.read_excel("coba2.xlsx")
-    data = pd.read_csv("ifr_test.csv")
+    data = pd.read_excel("coba2.xlsx")
+    # data = pd.read_csv("ifr_test.csv")
     data.to_parquet('raw_data.parquet','auto')
     return data
 
 data = load_data()
 
 list_year = data['period_year'].unique().tolist()
-list_month = data['period_month'].sort_values().unique().tolist()
+month_mapping = {i: calendar.month_name[i] for i in range(1, 13)}
+list_month_nums = sorted(data["period_month"].unique().tolist())
+list_month_names = [month_mapping[month] for month in list_month_nums]
 list_companies = data['company'].unique().tolist()
 list_brands = data['brand'].unique().tolist()
 
@@ -27,7 +30,8 @@ with c1:
     if selected_year:
         data = data[data['period_year'] == selected_year]
 with c2:
-    selected_month = c2.selectbox('Period Month',list_month)
+    selected_month_name = c2.selectbox('Period Month', list_month_names)
+    selected_month = list(month_mapping.keys())[list(month_mapping.values()).index(selected_month_name)]
     if selected_month:
         data = data[data['period_month'] == selected_month]
 with c3:
@@ -183,6 +187,9 @@ with tabs[0]:
             type= 'fitCellContents'
         ),
         autoSizeAllColumns = True,
+        suppressAggFuncInHeader = True,
+        groupDefaultExpanded = 7,
+
     )
     go = gb.build()
 
