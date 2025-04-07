@@ -1,16 +1,84 @@
+import calendar
+import datetime
 import streamlit as st
 import pandas as pd
 from st_aggrid import AgGrid, GridOptionsBuilder
+import numpy as np
 
 # @st.cache_data()
 def load_data():
-    data = pd.read_csv("./coba.csv", sep=";")
+    data = pd.read_csv("./new_data_mapping_ifr.csv", sep=",")
     return data
 
 data = load_data()
-print(data)
+# print(data.columns)
+
+# data = data.drop(["test1", "test2"], axis=1)
+
+# data["type"] = np.where((data.index + 1) % 2 != 0, "Actual", "Budget")
+
+# data = data.rename(columns={
+#     "section" : "level_1", 
+#     "subsection" : "level_2", 
+#     "subsubsection" : "level_3", 
+#     "subsubsubsection" : "level_4", 
+#     "subsubsubsubsection" : "level_5", 
+#     "total" : "mutation"
+# })
+
+
+# months = ["January", "February", "March", "April", "May", "June",
+#           "July", "August", "September", "October", "November", "December"]
+
+# data["level_6"] = None
+# data["level_7"] = None
+# data["period_month"] = np.random.choice(months, size=len(data))
+# data["period_year"] = np.random.choice([2024, 2025], size=len(data))
+# data["ytd"] = None
+
+
+# desired_order = [
+#     "level_1", "level_2", "level_3", "level_4", "level_5",
+#     "level_6", "level_7", "company", "brand",
+#     "period_year", "period_month", "type", "mutation", "ytd"
+# ]
+
+# data = data[desired_order]
+
+# data.to_csv("new_data_mapping_ifr.csv", index=False)
 
 st.set_page_config(page_title='IFR test report',layout='wide',initial_sidebar_state='expanded')
+
+h1,h2,h3,h4= st.columns(4)
+today = datetime.datetime.now()
+if today.month - 1 == 0:
+    default_month_index = 11
+    default_year = today.year - 1
+else:
+    default_month_index = today.month - 2 # previous month
+    # default_month_index = today.month - 1 # current month
+    default_year = today.year
+with h1:
+    list_year = [today.year, today.year - 1]
+    select_year = h1.selectbox("Year", list_year, index=list_year.index(default_year), key="year")
+    data = data[data["period_year"] == select_year]
+with h2:
+    list_month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+    select_month = h2.selectbox("Month", list_month, index=default_month_index, key="month_start")
+    month_dict = dict((v, k) for k, v in enumerate(calendar.month_name))
+    selected_month = month_dict[select_month]   
+    selected_month = "0"+ str(selected_month) if len(str(selected_month)) < 2 else str(selected_month)
+    data = data[data["period_month"] == select_month]
+with h3:
+    brands = data["brand"].unique()
+    selected_brands = h3.multiselect("Brand", brands)
+    if selected_brands:
+        data = data[data["brand"].isin(selected_brands)]
+with h4:
+    companies = data["company"].unique()
+    selected_companies = h4.multiselect("Company", companies)
+    if selected_companies:
+        data = data[data["company"].isin(selected_companies)]
 
 shouldDisplayPivoted = st.checkbox("Pivot data on Reference Date")
 
@@ -23,38 +91,57 @@ gb.configure_default_column(
     editable=False,
 )
 gb.configure_column(
-    field="section", header_name="section", width=80, rowGroup=shouldDisplayPivoted
+    field="level_1", 
+    header_name="Level 1",
+    width=80, 
+    rowGroup=shouldDisplayPivoted
 )
 
 gb.configure_column(
-    field="subsection",
-    header_name="subsection",
+    field="level_2",
+    header_name="Level 2",
     flex=1,
-    tooltipField="subsection",
+    tooltipField="Level 2",
     rowGroup=True if shouldDisplayPivoted else False,
 )
 
 gb.configure_column(
-    field="subsubsection",
-    header_name="subsubsection",
+    field="level_3",
+    header_name="Level 3",
     flex=1,
-    tooltipField="subsubsection",
+    tooltipField="Level 3",
     rowGroup=True if shouldDisplayPivoted else False,
 )
 
 gb.configure_column(
-    field="subsubsubsection",
-    header_name="subsubsubsection",
+    field="level_4",
+    header_name="Level 4",
     flex=1,
-    tooltipField="subsubsubsection",
+    tooltipField="Level 4",
     rowGroup=True if shouldDisplayPivoted else False,
 )
 
 gb.configure_column(
-    field="subsubsubsubsection",
-    header_name="subsubsubsubsection",
+    field="level_5",
+    header_name="Level 5",
     flex=1,
-    tooltipField="subsubsubsubsection",
+    tooltipField="Level 5",
+    rowGroup=True if shouldDisplayPivoted else False,
+)
+
+gb.configure_column(
+    field="level_6",
+    header_name="Level 6",
+    flex=1,
+    tooltipField="Level 6",
+    rowGroup=True if shouldDisplayPivoted else False,
+)
+
+gb.configure_column(
+    field="level_7",
+    header_name="Level 7",
+    flex=1,
+    tooltipField="Level 7",
     rowGroup=True if shouldDisplayPivoted else False,
 )
 
@@ -76,12 +163,20 @@ gb.configure_column(
 )
 
 gb.configure_column(
-    field="total",
-    header_name="total",
-    width=100,
-    type=["numericColumn"],
+    "type",
+    header_name="Type",
+    pivot=True,         # <-- Pivot on the 'type' field
+    rowGroup=False      # Usually no need to group by 'type' if we are pivoting it
+)
+
+# Make 'mutation' the numeric field to aggregate
+gb.configure_column(
+    "mutation",
+    pivotValueColumn=True,
+    pivotValueName="",  # remove the label so columns become just "Actual", "Budget"
+    header_name="",     # no header for the pivot value
     aggFunc="sum",
-    # valueFormatter="value.toLocaleString()",
+    type=["numericColumn"]
 )
 
 gb.configure_grid_options(
@@ -94,8 +189,12 @@ gb.configure_grid_options(
         minWidth=300, 
         pinned="left", 
         cellRendererParams=dict(suppressCount=True)
-    )
+    ),
+    suppressAggFuncInHeader = True,
+    groupDefaultExpanded = 7,
 )
 go = gb.build()
+
+st.write(data)
 
 AgGrid(data, gridOptions=go,fit_columns_on_grid_load=True,height=400)
