@@ -11,8 +11,6 @@ c1,c2,c3,c4 = st.columns(4)
 
 @st.cache_data()
 def load_data():
-    # data = pd.read_excel("coba2.xlsx")
-    # data = pd.read_csv("raw_data.csv")
     data = pd.read_parquet('raw_data.parquet')
     return data
 
