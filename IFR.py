@@ -16,10 +16,21 @@ def load_data():
 
 data = load_data()
 
-print(data[data['level_5']=='Pihak Ketiga'])
-
 list_year = data['period_year'].unique().tolist()
-month_mapping = {i: calendar.month_name[i] for i in range(1, 13)}
+month_mapping = {
+    '01':'January',
+    '02':'February',
+    '03':'March',
+    '04':'April',
+    '05':'May',
+    '06':'June',
+    '07':'July',
+    '08':'August',
+    '09':'September',
+    '10':'October',
+    '11':'November',
+    '12':'December',
+}
 list_month_nums = sorted(data["period_month"].unique().tolist())
 list_month_names = [month_mapping[month] for month in list_month_nums]
 list_companies = data['company'].unique().tolist()
@@ -180,8 +191,6 @@ with tabs[0]:
         ),
         autoSizeAllColumns = True,
         suppressAggFuncInHeader = True,
-        groupDefaultExpanded = 7,
-
     )
     go = gb.build()
 
