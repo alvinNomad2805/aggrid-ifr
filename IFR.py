@@ -17,7 +17,7 @@ def load_data():
 data = load_data()
 
 manual_order = ['I. OUTLET',
-                'II. VOLUME  (in unit)',
+                'II. VOLUME (in unit)',
                 'III. STATEMENTS OF COMPREHENSIVE INCOME (in Rp full amount)',
                 'IV. STATEMENTS OF FINANCIAL POSITION (in Rp full amount)',
                 'V. TOTAL MAN POWER',

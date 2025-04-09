@@ -11,7 +11,7 @@ if __name__ == '__main__':
             data = url.json()['Data']
             data_complete = pd.DataFrame(data)
             data_to_parquet = data_complete.to_parquet('raw_data.parquet')
-            time.sleep(86400)
             print('finished....')
+            time.sleep(86400)
     except KeyboardInterrupt:
         print('scheduler terminated...')
