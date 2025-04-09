@@ -16,6 +16,16 @@ def load_data():
 
 data = load_data()
 
+manual_order = ['I. OUTLET',
+                'II. VOLUME  (in unit)',
+                'III. STATEMENTS OF COMPREHENSIVE INCOME (in Rp full amount)',
+                'IV. STATEMENTS OF FINANCIAL POSITION (in Rp full amount)',
+                'V. TOTAL MAN POWER',
+                'VI.RATIO ANALYSIS']
+
+data['level_1'] = pd.Categorical(data['level_1'],categories=manual_order,ordered=True)
+data = data.sort_values('level_1')
+
 list_year = data['period_year'].unique().tolist()
 month_mapping = {
     '01':'January',
