@@ -1,0 +1,8 @@
+services:
+  ifr:
+    build: ./ifr
+    ports:
+      - "7050:7050"
+  
+  scheduler:
+    build: ./scheduler
