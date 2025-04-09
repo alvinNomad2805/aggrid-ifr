@@ -1,4 +1,4 @@
-import calendar
+from io import BytesIO
 import streamlit as st
 import pandas as pd
 from st_aggrid import AgGrid, GridOptionsBuilder
@@ -13,6 +13,13 @@ c1,c2,c3,c4 = st.columns(4)
 def load_data():
     data = pd.read_parquet('raw_data.parquet')
     return data
+
+def convert_df_to_excel(dataframe):
+    output = BytesIO()
+    with pd.ExcelWriter(output, engine='openpyxl') as writer:
+        dataframe.to_excel(writer, index=False, sheet_name='Sheet1')
+    processed_data = output.getvalue()
+    return processed_data
 
 data = load_data()
 
@@ -71,7 +78,6 @@ tabs = st.tabs(['Detail Summary','Detail Percentage'])
 
 with tabs[0]:
     st.subheader('IFR summary and detail')
-    # shouldDisplayPivoted = st.checkbox("Check the detail IFR")
     shouldDisplayPivoted = True
 
     gb = GridOptionsBuilder()
@@ -141,7 +147,6 @@ with tabs[0]:
         field="company",
         header_name="company",
         width=100,
-        # valueFormatter="value != undefined ? new Date(value).toLocaleString('en-US', {dateStyle:'medium'}): ''",
         pivot=True,
         hide=False,
     )
@@ -149,7 +154,6 @@ with tabs[0]:
     gb.configure_column(
         field="brand",
         header_name="brand",
-        # valueGetter="new Date(data.referenceDate).getFullYear()",
         pivot=True,
         hide=False,
     )
@@ -157,7 +161,6 @@ with tabs[0]:
     gb.configure_column(
         field="period_year",
         header_name="Year",
-        # valueGetter="new Date(data.referenceDate).getFullYear()",
         pivot=False,
         hide=False,
     )
@@ -165,7 +168,6 @@ with tabs[0]:
     gb.configure_column(
         field="period_month",
         header_name="Month",
-        # valueGetter="new Date(data.referenceDate).getFullYear()",
         pivot=False,
         hide=False,
     )
@@ -173,7 +175,6 @@ with tabs[0]:
     gb.configure_column(
         field="value_type",
         header_name="Type",
-        # valueGetter="new Date(data.referenceDate).getFullYear()",
         pivot=True,
         hide=False,
     )
@@ -204,7 +205,15 @@ with tabs[0]:
     )
     go = gb.build()
 
-    AgGrid(data, gridOptions=go,fit_columns_on_grid_load=False,height=700)
+    output = AgGrid(data, gridOptions=go,fit_columns_on_grid_load=False,height=700)
+    excel_data = convert_df_to_excel(data)
+
+    st.download_button(
+        label="📤 Download Excel",
+        data=excel_data,
+        file_name='aggrid_data.xlsx',
+        mime='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
+    )
 with tabs[1]:
     st.subheader('Percentage Summary')
     data = {
