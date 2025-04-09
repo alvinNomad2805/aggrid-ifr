@@ -1,8 +1,7 @@
 services:
   ifr:
-    build: ./ifr
+    build: .
     ports:
       - "7050:7050"
-  
-  scheduler:
-    build: ./scheduler
+    volumes:
+      - ./raw_data.parquet:/ifr-aggrid/raw_data.parquet
