@@ -74,9 +74,9 @@ selected_brand = st.multiselect('Select Brand(s) (multi selection)',list_brands)
 if selected_brand != []:
     data = data[data['brand'].isin(selected_brand)]
 
-tabs = st.tabs(['Year to Date','Current Month'])
+radio_selected = st.radio(label='Please select report type',options=['Year to Date','Current Month'])
 
-with tabs[0]:
+if radio_selected=='Year to Date':
     st.subheader('IFR Year to Date Report')
     shouldDisplayPivoted = True
 
@@ -205,10 +205,9 @@ with tabs[0]:
     )
     go = gb.build()
 
-    output = AgGrid(data, gridOptions=go,fit_columns_on_grid_load=False,height=700)
-    excel_data = convert_df_to_excel(data)
+    AgGrid(data, gridOptions=go,fit_columns_on_grid_load=False,height=700)
 
-with tabs[1]:
+elif radio_selected=='Current Month':
     st.subheader('IFR Current Month Report')
     shouldDisplayPivoted = True
 
@@ -338,11 +337,13 @@ with tabs[1]:
     go = gb.build()
 
     output = AgGrid(data, gridOptions=go,fit_columns_on_grid_load=False,height=700)
-    excel_data = convert_df_to_excel(data)
+
+else:
+    st.write('selection not valid')
 
 st.download_button(
     label="📤 Download Excel",
-    data=excel_data,
+    data=convert_df_to_excel(data),
     file_name='aggrid_data.xlsx',
     mime='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
 )
