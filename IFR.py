@@ -9,7 +9,7 @@ st.title('Indomobil Financial Reports')
 
 c1,c2,c3,c4 = st.columns(4)
 
-@st.cache_data()
+@st.cache_data(ttl=3600)
 def load_data():
     data = pd.read_parquet('raw_data.parquet')
     return data
