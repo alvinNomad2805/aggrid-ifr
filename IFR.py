@@ -179,8 +179,17 @@ with tabs[0]:
         hide=False,
     )
 
+    # gb.configure_column(
+    #     field="mutation_value",
+    #     header_name="Total",
+    #     width=150,
+    #     type=["numericColumn"],
+    #     aggFunc="sum",
+    #     valueFormatter="value.toLocaleString()",
+    # )
+
     gb.configure_column(
-        field="mutation_value",
+        field="ytd_value",
         header_name="Total",
         width=150,
         type=["numericColumn"],
