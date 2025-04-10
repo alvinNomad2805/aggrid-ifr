@@ -74,10 +74,10 @@ selected_brand = st.multiselect('Select Brand(s) (multi selection)',list_brands)
 if selected_brand != []:
     data = data[data['brand'].isin(selected_brand)]
 
-tabs = st.tabs(['Detail Summary','Detail Percentage'])
+tabs = st.tabs(['Year to Date','Current Month'])
 
 with tabs[0]:
-    st.subheader('IFR summary and detail')
+    st.subheader('IFR Year to Date Report')
     shouldDisplayPivoted = True
 
     gb = GridOptionsBuilder()
@@ -179,15 +179,6 @@ with tabs[0]:
         hide=False,
     )
 
-    # gb.configure_column(
-    #     field="mutation_value",
-    #     header_name="Total",
-    #     width=150,
-    #     type=["numericColumn"],
-    #     aggFunc="sum",
-    #     valueFormatter="value.toLocaleString()",
-    # )
-
     gb.configure_column(
         field="ytd_value",
         header_name="Total",
@@ -217,22 +208,141 @@ with tabs[0]:
     output = AgGrid(data, gridOptions=go,fit_columns_on_grid_load=False,height=700)
     excel_data = convert_df_to_excel(data)
 
-    st.download_button(
-        label="📤 Download Excel",
-        data=excel_data,
-        file_name='aggrid_data.xlsx',
-        mime='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
-    )
 with tabs[1]:
-    st.subheader('Percentage Summary')
-    data = {
-        "Group":['Unit Sales'],
-        "Company":["Indomobil Trada Nasional - MT Haryono"],
-        "Brand":["Nissan"],
-        "Year":["2024"],
-        "Month":["04"],
-        "Percentage":[43]
+    st.subheader('IFR Current Month Report')
+    shouldDisplayPivoted = True
 
-    }
-    df = pd.DataFrame(data=data)
-    st.dataframe(df)
+    gb = GridOptionsBuilder()
+
+    gb.configure_default_column(
+        resizable=True,
+        filterable=True,
+        sortable=True,
+        editable=False,
+    )
+    gb.configure_column(
+        field="level_1", 
+        header_name="Level 1", 
+        width=80, 
+        rowGroup=shouldDisplayPivoted
+    )
+
+    gb.configure_column(
+        field="level_2",
+        header_name="Level 2",
+        flex=1,
+        tooltipField="Level 2",
+        rowGroup=True if shouldDisplayPivoted else False,
+    )
+
+    gb.configure_column(
+        field="level_3",
+        header_name="Level 3",
+        flex=1,
+        tooltipField="Level 3",
+        rowGroup=True if shouldDisplayPivoted else False,
+    )
+
+    gb.configure_column(
+        field="level_4",
+        header_name="Level 4",
+        flex=1,
+        tooltipField="Level 4",
+        rowGroup=True if shouldDisplayPivoted else False,
+    )
+
+    gb.configure_column(
+        field="level_5",
+        header_name="Level 5",
+        flex=1,
+        tooltipField="Level 5",
+        rowGroup=True if shouldDisplayPivoted else False,
+    )
+
+    gb.configure_column(
+        field="level_6",
+        header_name="Level 6",
+        flex=1,
+        tooltipField="Level 6",
+        rowGroup=True if shouldDisplayPivoted else False,
+    )
+
+    gb.configure_column(
+        field="level_7",
+        header_name="Level 7",
+        flex=1,
+        tooltipField="Level 7",
+        rowGroup=True if shouldDisplayPivoted else False,
+    )
+
+    gb.configure_column(
+        field="company",
+        header_name="company",
+        width=100,
+        pivot=True,
+        hide=False,
+    )
+
+    gb.configure_column(
+        field="brand",
+        header_name="brand",
+        pivot=True,
+        hide=False,
+    )
+
+    gb.configure_column(
+        field="period_year",
+        header_name="Year",
+        pivot=False,
+        hide=False,
+    )
+
+    gb.configure_column(
+        field="period_month",
+        header_name="Month",
+        pivot=False,
+        hide=False,
+    )
+
+    gb.configure_column(
+        field="value_type",
+        header_name="Type",
+        pivot=True,
+        hide=False,
+    )
+
+    gb.configure_column(
+        field="mutation_value",
+        header_name="Total",
+        width=150,
+        type=["numericColumn"],
+        aggFunc="sum",
+        valueFormatter="value.toLocaleString()",
+    )
+
+    gb.configure_grid_options(
+        tooltipShowDelay=0,
+        pivotMode=shouldDisplayPivoted,
+        autoGroupColumnDef=dict(
+            minWidth=300, 
+            pinned="left", 
+            cellRendererParams=dict(suppressCount=True)
+        ),
+        pivotDefaultExpanded = -1,
+        autoSizeStrategy=dict(
+            type= 'fitCellContents'
+        ),
+        autoSizeAllColumns = True,
+        suppressAggFuncInHeader = True,
+    )
+    go = gb.build()
+
+    output = AgGrid(data, gridOptions=go,fit_columns_on_grid_load=False,height=700)
+    excel_data = convert_df_to_excel(data)
+
+st.download_button(
+    label="📤 Download Excel",
+    data=excel_data,
+    file_name='aggrid_data.xlsx',
+    mime='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
+)
