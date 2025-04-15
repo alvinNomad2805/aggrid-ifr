@@ -1,6 +1,7 @@
 from io import BytesIO
 import streamlit as st
 import pandas as pd
+import polars as pl
 from st_aggrid import AgGrid, GridOptionsBuilder
 
 st.set_page_config(page_title='IFR test report',layout='wide',initial_sidebar_state='expanded')
@@ -11,7 +12,7 @@ c1,c2,c3,c4 = st.columns(4)
 
 @st.cache_data(ttl=3600)
 def load_data():
-    data = pd.read_parquet('raw_data.parquet')
+    data = pl.read_parquet('raw_data.parquet')
     return data
 
 def convert_df_to_excel(dataframe):
@@ -22,6 +23,7 @@ def convert_df_to_excel(dataframe):
     return processed_data
 
 data = load_data()
+data = data.to_pandas()
 
 manual_order = ['I. OUTLET',
                 'II. VOLUME (in unit)',
@@ -32,8 +34,12 @@ manual_order = ['I. OUTLET',
 
 data['level_1'] = pd.Categorical(data['level_1'],categories=manual_order,ordered=True)
 data = data.sort_values('level_1')
+# manual_order = pl.Enum(manual_order)
+# data = data.with_columns(pl.col("level_1").cast(manual_order))
+# data = data.sort("level_1")
 
 list_year = data['period_year'].unique().tolist()
+# list_year = data.select(pl.col("period_year").unique()).to_series().to_list()
 month_mapping = {
     '01':'January',
     '02':'February',
@@ -49,19 +55,25 @@ month_mapping = {
     '12':'December',
 }
 list_month_nums = sorted(data["period_month"].unique().tolist())
+# list_month_nums = data.select(pl.col("period_month").unique()).to_series().to_list().sort()
+
 list_month_names = [month_mapping[month] for month in list_month_nums]
 list_companies = data['company'].unique().tolist()
 list_brands = data['brand'].unique().tolist()
+# list_companies = data.select(pl.col("company").unique()).to_series().to_list()
+# list_brands = data.select(pl.col("brand").unique()).to_series().to_list()
 
 with c1:
     selected_year = c1.selectbox('Period Year',list_year)
     if selected_year:
         data = data[data['period_year'] == selected_year]
+        # data = data.filter(pl.col("period_year") == selected_year)
 with c2:
     selected_month_name = c2.selectbox('Period Month', list_month_names)
     selected_month = list(month_mapping.keys())[list(month_mapping.values()).index(selected_month_name)]
     if selected_month:
         data = data[data['period_month'] == selected_month]
+        # data = data.filter(pl.col("period_month") == selected_month)
 with c3:
     pass
 with c4:
@@ -70,9 +82,11 @@ with c4:
 selected_companies = st.multiselect('Select Company(ies) (multi selection)',list_companies)
 if selected_companies != []:
     data = data[data['company'].isin(selected_companies)]
+    # data = data.filter(pl.col("company").is_in(selected_companies))
 selected_brand = st.multiselect('Select Brand(s) (multi selection)',list_brands)
 if selected_brand != []:
     data = data[data['brand'].isin(selected_brand)]
+    # data = data.filter(pl.col("brand").is_in(selected_brand))
 
 radio_selected = st.radio(label='Please select report type',options=['Year to Date','Current Month'])
 
@@ -341,9 +355,9 @@ elif radio_selected=='Current Month':
 else:
     st.write('selection not valid')
 
-st.download_button(
-    label="📤 Download Excel",
-    data=convert_df_to_excel(data),
-    file_name='aggrid_data.xlsx',
-    mime='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
-)
+# st.download_button(
+#     label="📤 Download Excel",
+#     data=convert_df_to_excel(data),
+#     file_name='aggrid_data.xlsx',
+#     mime='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
+# )
