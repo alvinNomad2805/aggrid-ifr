@@ -2,6 +2,7 @@ from io import BytesIO
 import streamlit as st
 import pandas as pd
 import polars as pl
+import st_aggrid as ag
 from st_aggrid import AgGrid, GridOptionsBuilder
 
 st.set_page_config(page_title='IFR test report',layout='wide',initial_sidebar_state='expanded')
@@ -193,13 +194,14 @@ if radio_selected=='Year to Date':
         hide=False,
     )
 
+
     gb.configure_column(
         field="ytd_value",
         header_name="Total",
         width=150,
-        type=["numericColumn"],
+        type=["numericColumn","numberColumnFilter","customNumericFormat"],
         aggFunc="sum",
-        valueFormatter="value.toLocaleString()",
+        valueFormatter='new Intl.NumberFormat("en-GB", { style: "decimal", minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(x)',
     )
 
     gb.configure_grid_options(
@@ -328,9 +330,10 @@ elif radio_selected=='Current Month':
         field="mutation_value",
         header_name="Total",
         width=150,
-        type=["numericColumn"],
+        type=["numericColumn","numberColumnFilter","customNumericFormat"],
+        precision=2,
         aggFunc="sum",
-        valueFormatter="value.toLocaleString()",
+        valueFormatter='new Intl.NumberFormat("en-GB", { style: "decimal", minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(x)',
     )
 
     gb.configure_grid_options(
