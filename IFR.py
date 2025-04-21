@@ -31,7 +31,7 @@ manual_order = ['I. OUTLET',
                 'III. STATEMENTS OF COMPREHENSIVE INCOME (in Rp full amount)',
                 'IV. STATEMENTS OF FINANCIAL POSITION (in Rp full amount)',
                 'V. TOTAL MAN POWER',
-                'VI.RATIO ANALYSIS']
+                'VI. RATIO ANALYSIS']
 
 # sub_1 = ['3S (Sales, Service, & Sparepart)','2S (Service, & Sparepart)','1S (Sales)'
 #          ,'Unit Sales','Unit Entry Workshop and Body Repair','Unit Financing','Quantity Sparepart','Volume liter','Unit Assembling']
