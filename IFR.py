@@ -33,8 +33,13 @@ manual_order = ['I. OUTLET',
                 'V. TOTAL MAN POWER',
                 'VI.RATIO ANALYSIS']
 
+# sub_1 = ['3S (Sales, Service, & Sparepart)','2S (Service, & Sparepart)','1S (Sales)'
+#          ,'Unit Sales','Unit Entry Workshop and Body Repair','Unit Financing','Quantity Sparepart','Volume liter','Unit Assembling']
+
 data['level_1'] = pd.Categorical(data['level_1'],categories=manual_order,ordered=True)
 data = data.sort_values('level_1')
+# data['level_2'] = pd.Categorical(data['level_2'],categories=sub_1,ordered=True)
+# data = data.sort_values('level_2')
 # manual_order = pl.Enum(manual_order)
 # data = data.with_columns(pl.col("level_1").cast(manual_order))
 # data = data.sort("level_1")
