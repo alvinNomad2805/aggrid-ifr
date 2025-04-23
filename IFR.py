@@ -9,6 +9,9 @@ st.set_page_config(page_title='IFR test report',layout='wide',initial_sidebar_st
 
 st.title('Indomobil Financial Reports')
 
+#get urutan
+cek_data = pl.read_excel('urutan_ifr.xlsx')
+
 c1,c2,c3,c4 = st.columns(4)
 
 @st.cache_data(ttl=3600)
@@ -26,23 +29,31 @@ def convert_df_to_excel(dataframe):
 data = load_data()
 data = data.to_pandas()
 
-manual_order = ['I. OUTLET',
-                'II. VOLUME (in unit)',
-                'III. STATEMENTS OF COMPREHENSIVE INCOME (in Rp full amount)',
-                'IV. STATEMENTS OF FINANCIAL POSITION (in Rp full amount)',
-                'V. TOTAL MAN POWER',
-                'VI. RATIO ANALYSIS']
+level_1 = cek_data[:,0].drop_nulls()
+data['level_1'] = pd.Categorical(data['level_1'],categories=level_1,ordered=True)
 
-# sub_1 = ['3S (Sales, Service, & Sparepart)','2S (Service, & Sparepart)','1S (Sales)'
-#          ,'Unit Sales','Unit Entry Workshop and Body Repair','Unit Financing','Quantity Sparepart','Volume liter','Unit Assembling']
+level_2 = cek_data[:,1].drop_nulls()
+data['level_2'] = pd.Categorical(data['level_2'],categories=level_2,ordered=True)
 
-data['level_1'] = pd.Categorical(data['level_1'],categories=manual_order,ordered=True)
-data = data.sort_values('level_1')
-# data['level_2'] = pd.Categorical(data['level_2'],categories=sub_1,ordered=True)
-# data = data.sort_values('level_2')
-# manual_order = pl.Enum(manual_order)
-# data = data.with_columns(pl.col("level_1").cast(manual_order))
-# data = data.sort("level_1")
+level_3 = cek_data[:,2].drop_nulls()
+data['level_3'] = pd.Categorical(data['level_3'],categories=level_3,ordered=True)
+
+level_4 = cek_data[:,3].drop_nulls()
+data['level_4'] = pd.Categorical(data['level_4'],categories=level_4,ordered=True)
+
+level_5 = cek_data[:,4].drop_nulls()
+data['level_5'] = pd.Categorical(data['level_5'],categories=level_5,ordered=True)
+
+level_6 = cek_data[:,5].drop_nulls()
+data['level_6'] = pd.Categorical(data['level_6'],categories=level_6,ordered=True)
+
+level_7 = cek_data[:,6].drop_nulls()
+data['level_7'] = pd.Categorical(data['level_7'],categories=level_7,ordered=True)
+
+
+data = data.sort_values(['level_1','level_2','level_3','level_4','level_5','level_6','level_7'])
+
+
 
 list_year = data['period_year'].unique().tolist()
 # list_year = data.select(pl.col("period_year").unique()).to_series().to_list()
