@@ -374,9 +374,9 @@ elif radio_selected=='Current Month':
 else:
     st.write('selection not valid')
 
-# st.download_button(
-#     label="📤 Download Excel",
-#     data=convert_df_to_excel(data),
-#     file_name='aggrid_data.xlsx',
-#     mime='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
-# )
+st.download_button(
+    label="📤 Download Excel",
+    data=convert_df_to_excel(data),
+    file_name='IFR-data-source.xlsx',
+    mime='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
+)
