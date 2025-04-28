@@ -1,0 +1,18 @@
+name: Testing
+
+on:
+  push:
+    branches:
+      - development
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout after pushed to the development branch
+      uses: actions/checkout@v4  # Make sure to use the latest checkout action
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.12'  # specify your Python
