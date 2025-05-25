@@ -1,0 +1,7 @@
+cookie:
+  expiry_days: 30
+  key: some_signature_key # Must be string
+  name: dms_dashboard_cookie
+preauthorized:
+  emails:
+  - alvinsahroni@gmail.com
